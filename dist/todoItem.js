@@ -8,8 +8,7 @@ class TodoItem {
         this.complete = complete;
     }
     printDetails() {
-        console.log(`${this.id}\t${this.task} 
-                        ${this.complete} ?"\t(complete)": ""`);
+        console.log(`${this.id}\t${this.task}\t${this.complete ? "\t(complete)" : ""}`);
     }
 }
 exports.TodoItem = TodoItem;
