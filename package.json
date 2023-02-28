@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/OpenTechConsult/todo-typescript/issues"
   },
-  "homepage": "https://github.com/OpenTechConsult/todo-typescript#readme"
+  "homepage": "https://github.com/OpenTechConsult/todo-typescript#readme",
+  "dependencies": {
+    "inquirer": "^8.2.5"
+  }
 }
