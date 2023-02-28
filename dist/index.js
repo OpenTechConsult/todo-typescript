@@ -11,6 +11,6 @@ let todos = [
 let collection = new todoCollection_1.TodoCollection("Sandro", todos);
 console.clear();
 console.log(`${collection.userName}'s Todo List`);
-let newId = collection.addTodo("Goo for run");
-let todoItem = collection.getTodoById(newId);
-todoItem.printDetails();
+collection.getTodoItems(true).forEach((item) => {
+    item.printDetails();
+});

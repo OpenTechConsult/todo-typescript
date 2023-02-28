@@ -13,6 +13,6 @@ let collection: TodoCollection = new TodoCollection("Sandro", todos);
 console.clear();
 console.log(`${collection.userName}'s Todo List`);
 
-let newId: number = collection.addTodo("Goo for run");
-let todoItem: TodoItem = collection.getTodoById(newId);
-todoItem.printDetails();
+collection.getTodoItems(true).forEach((item) => {
+    item.printDetails();
+})
