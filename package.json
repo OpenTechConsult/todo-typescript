@@ -19,5 +19,8 @@
   "homepage": "https://github.com/OpenTechConsult/todo-typescript#readme",
   "dependencies": {
     "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.5"
   }
 }
