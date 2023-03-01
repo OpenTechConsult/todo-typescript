@@ -10,14 +10,16 @@ let todos = [
     new todoItem_1.TodoItem(4, "Call Joe", true)
 ];
 let collection = new todoCollection_1.TodoCollection("Sandro", todos);
+let showCompleted = true;
 function displayTodoList() {
     console.log(`${collection.userName}'s Todo List (${collection.getItemCounts().incomplete} items to do)`);
-    collection.getTodoItems(true).forEach((item) => {
+    collection.getTodoItems(showCompleted).forEach((item) => {
         item.printDetails();
     });
 }
 var Commands;
 (function (Commands) {
+    Commands["Toggle"] = "Show/Hide Completed";
     Commands["Quit"] = "Quit";
 })(Commands || (Commands = {}));
 function promptUser() {
@@ -27,11 +29,15 @@ function promptUser() {
         type: "list",
         name: "command",
         message: "Choose option",
-        choices: Object.values(Commands),
-        badProperty: true
+        choices: Object.values(Commands)
     }).then((answers) => {
-        if (answers["command"] !== Commands.Quit) {
-            promptUser();
+        switch (answers["command"]) {
+            case Commands.Toggle:
+                showCompleted = !showCompleted;
+                promptUser();
+                break;
+            default:
+                break;
         }
     });
 }
