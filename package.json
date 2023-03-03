@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/OpenTechConsult/todo-typescript#readme",
   "dependencies": {
-    "inquirer": "^8.2.5"
+    "@types/lowdb": "^1.0.9",
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0"
   },
   "devDependencies": {
-    "@types/inquirer": "^8.2.5"
+    "@types/inquirer": "^7.3.1"
   }
 }

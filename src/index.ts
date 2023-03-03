@@ -2,6 +2,7 @@ import * as inquirer from 'inquirer';
 
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
+import { JsonTodoCollection } from "./jsonTodoCollection";
 
 let todos: TodoItem[] = [
     new TodoItem(1, "Buy flowers"),
@@ -10,7 +11,8 @@ let todos: TodoItem[] = [
     new TodoItem(4, "Call Joe", true)
 ];
 
-let collection: TodoCollection = new TodoCollection("Sandro", todos);
+// let collection: TodoCollection = new TodoCollection("Sandro", todos);
+let collection: TodoCollection = new JsonTodoCollection("Sandro", todos);
 let showCompleted = true;
 
 function displayTodoList(): void {
